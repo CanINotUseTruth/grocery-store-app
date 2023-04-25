@@ -1,0 +1,19 @@
+.navigation {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.5rem 0rem;
+  background-image: linear-gradient(#9dc08b, #609966);
+  color: black;
+  box-shadow: 0 4px 5px 2px #609966;
+  margin-bottom: 10px;
+}
+
+.brand-name {
+  text-decoration: none;
+  color: black;
+  font-size: 1.3rem;
+  margin-left: 1rem;
+}

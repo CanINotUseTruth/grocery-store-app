@@ -1,0 +1,39 @@
+.details-divider {
+  border-top: 5px solid #609966;
+  border-radius: 3px;
+}
+
+.details-content {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+}
+
+.details-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details-title {
+  margin: 5px;
+  font-weight: bold;
+  color: #609966;
+  font-size: x-large;
+}
+
+.details-list {
+  list-style: none;
+}
+
+.details-list span {
+  margin: 5px;
+  font-weight: bold;
+  color: #609966;
+  font-size: large;
+}
+
+.details-list li {
+  padding: 10px;
+}

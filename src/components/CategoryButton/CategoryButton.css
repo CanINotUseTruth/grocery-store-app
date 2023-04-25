@@ -1,0 +1,51 @@
+.subnav {
+  position: relative;
+}
+
+.subnav button {
+  display: block;
+  width: 100%;
+  background-color: #eee;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  padding: 14px 16px;
+  margin: 0;
+  color: #333;
+}
+
+.subnav button:hover {
+  background-color: #333;
+  color: #eee;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 100%;
+  z-index: 1;
+}
+
+.subnav-content button {
+  float: left;
+  width: inherit;
+  color: white;
+  background-color: #333;
+  text-decoration: none;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+.subnav-content button {
+  background-color: #ddd;
+  color: #222;
+}
+
+.subnav-content button:hover {
+  background-color: #222;
+  color: #ddd;
+}

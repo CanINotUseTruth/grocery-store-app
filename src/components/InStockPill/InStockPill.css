@@ -1,0 +1,35 @@
+.pill {
+  font-size: smaller;
+  padding: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: #eee;
+  border-radius: 10px;
+  max-width: fit-content;
+  max-height: fit-content;
+}
+
+.pill.in {
+  background-color: rgba(46, 201, 67, 0.5);
+}
+
+.pill.out {
+  background-color: rgba(235, 24, 12, 0.5);
+}
+
+.indicator {
+  margin: auto;
+  margin-right: 5px;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.indicator.in {
+  background-color: rgba(46, 201, 67, 1);
+}
+
+.indicator.out {
+  background-color: rgba(235, 24, 12, 1);
+}
