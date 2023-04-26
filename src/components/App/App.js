@@ -87,6 +87,7 @@ function App() {
       headers: { 'content-type': 'application/json' },
     })
       .then((result) => {
+        console.log(result);
         setProducts(result.data);
       })
       .catch((err) => {

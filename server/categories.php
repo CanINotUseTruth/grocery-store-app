@@ -17,7 +17,7 @@
     die("Connection failed: " . mysqli_connect_error());
     }
     
-    $sql = "select distinct product_category from products"; 
+    $sql = "select distinct product_category from products;"; 
     
     // run SQL statement
     $result = mysqli_query($con,$sql);

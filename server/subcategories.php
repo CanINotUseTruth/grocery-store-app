@@ -19,7 +19,7 @@
 
     !array_key_exists('topcategory', $_POST) ? $category = '' : $category = $_POST['topcategory'];
     
-    $sql = "select distinct product_subcategory from products where product_category like '%$category%'"; 
+    $sql = "select distinct product_subcategory from products where product_category like '%$category%';"; 
     
     // run SQL statement
     $result = mysqli_query($con,$sql);

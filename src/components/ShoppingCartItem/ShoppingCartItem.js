@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './ShoppingCartItem.css';
 import { IoIosClose } from 'react-icons/io';
 
