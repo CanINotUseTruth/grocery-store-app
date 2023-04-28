@@ -26,7 +26,8 @@
             !array_key_exists('search', $_POST) ? $searchTerm = '' : $searchTerm = $_POST['search'];
             !array_key_exists('category', $_POST) ? $category = '' : $category = $_POST['category'];
             !array_key_exists('subCategory', $_POST) ? $subCategory = '' : $subCategory = $_POST['subCategory'];
-            $sql = "select * from products where product_name like '%$searchTerm%' and product_category like '%$category%' and product_subcategory like '%$subCategory%' order by product_category, product_subcategory, product_name;";
+            !array_key_exists('price', $_POST) ? $price = 100 : $price = $_POST['price'];
+            $sql = "select * from products where product_name like '%$searchTerm%' and product_category like '%$category%' and product_subcategory like '%$subCategory%' and unit_price <= $price order by product_category, product_subcategory, product_name;";
     }
     
     // run SQL statement

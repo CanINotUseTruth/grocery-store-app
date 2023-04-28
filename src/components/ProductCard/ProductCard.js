@@ -17,11 +17,28 @@ function ProductCard({
 
   function handleAdd() {
     if (shoppingCart.length > 0) {
-      let newCart = [...shoppingCart, product];
-      setShoppingCart(newCart);
+      let productIndex = checkForIndex(product);
+      if (productIndex > -1) {
+        let newCart = [...shoppingCart];
+        newCart[productIndex].quantity += 1;
+        setShoppingCart(newCart);
+      } else {
+        let newCart = [...shoppingCart, { ...product, quantity: 1 }];
+        setShoppingCart(newCart);
+      }
     } else {
-      setShoppingCart([product]);
+      setShoppingCart([{ ...product, quantity: 1 }]);
     }
+  }
+
+  function checkForIndex(product) {
+    var checkedArray = [-1];
+    for (let i = 0; i < shoppingCart.length; i++) {
+      if (shoppingCart[i].product_id === product.product_id) {
+        checkedArray[0] = i;
+      }
+    }
+    return checkedArray[0];
   }
 
   return (

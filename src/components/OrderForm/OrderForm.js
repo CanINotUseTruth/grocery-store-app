@@ -20,6 +20,7 @@ function OrderForm({
 
   function handleOrderEmail(event) {
     event.preventDefault();
+    let cartJson = JSON.stringify(shoppingCart);
     axios({
       method: 'post',
       url: `${API_PATH}`,
@@ -31,7 +32,7 @@ function OrderForm({
         suburb: `${suburb}`,
         city: `${city}`,
         postcode: `${postcode}`,
-        shoppingCart: `${shoppingCart}`,
+        shoppingCart: `${cartJson}`,
         cartTotal: `${cartTotal}`,
       },
     }).then((result) => {

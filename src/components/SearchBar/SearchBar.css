@@ -41,3 +41,38 @@
   border-color: #eee;
   width: 25rem;
 }
+
+.range-container {
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 17px;
+  padding-bottom: 0;
+}
+
+.price-slider {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-left: 10px;
+  width: 50%;
+  height: 5px;
+  background-color: #ddd;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  cursor: pointer; /* Cursor on hover */
+}
+
+.price-slider:hover {
+  opacity: 1;
+}
+
+.range-text {
+  width: auto;
+}

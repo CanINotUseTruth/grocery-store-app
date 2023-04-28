@@ -8,6 +8,8 @@ function SearchBar({
   handleClear,
   currentCategory,
   currentSubCategory,
+  maxPrice,
+  setMaxPrice,
 }) {
   // WIP - fix title to show subcategories as well
   let title = 'All Products';
@@ -25,6 +27,22 @@ function SearchBar({
         <p>{title}</p>
         <span className="search-bar-container">
           <form onSubmit={handleSearch}>
+            <div className="range-container">
+              <div className="range-text">Max Price:</div>
+              <input
+                type="range"
+                min="1"
+                max="100"
+                value={maxPrice}
+                onChange={function (event) {
+                  setMaxPrice(event.target.value);
+                }}
+                className="price-slider"
+                id="myRange"
+              />
+              <div className="range-text">${maxPrice}</div>
+            </div>
+
             <input
               className="search-field"
               placeholder="Input Search Term..."

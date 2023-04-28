@@ -17,6 +17,7 @@ const API_PATH =
 function App() {
   const [products, setProducts] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const [maxPrice, setMaxPrice] = useState(100);
   const [currentCategory, setCurrentCategory] = useState('');
   const [currentSubCategory, setCurrentSubCategory] = useState('');
   const [currentSelectedProduct, setCurrentSelectedProduct] =
@@ -69,6 +70,7 @@ function App() {
         search: `${searchTerm}`,
         category: `${currentCategory}`,
         subCategory: `${currentSubCategory}`,
+        price: `${maxPrice}`,
       },
     })
       .then((result) => {
@@ -100,6 +102,7 @@ function App() {
     setSearchTerm('');
     setCurrentCategory('');
     setCurrentSubCategory('');
+    setMaxPrice(100);
     // fetch data
     handleDefaultArray();
   }
@@ -127,6 +130,8 @@ function App() {
           setShoppingCart={setShoppingCart}
           toggleItemModal={toggleItemModal}
           setCurrentSelectedProduct={setCurrentSelectedProduct}
+          maxPrice={maxPrice}
+          setMaxPrice={setMaxPrice}
         />
 
         <ShoppingCart

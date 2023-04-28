@@ -18,10 +18,12 @@ function ShoppingCart({
   useEffect(() => {
     let newCartTotal = 0.0;
     shoppingCart.forEach((product) => {
-      newCartTotal += parseFloat(product.unit_price);
+      newCartTotal += parseFloat(
+        product.unit_price * product.quantity
+      );
     });
     setCartTotal(newCartTotal);
-  }, [shoppingCart]);
+  }, [shoppingCart, setCartTotal]);
 
   function toggleCart() {
     setCartVisibility(!cartVisibility);
@@ -59,9 +61,7 @@ function ShoppingCart({
               >
                 Order
               </button>
-              <button onClick={clearCart} disabled={cartHasItems}>
-                Clear
-              </button>
+              <button onClick={clearCart}>Clear</button>
             </div>
           </div>
         </div>

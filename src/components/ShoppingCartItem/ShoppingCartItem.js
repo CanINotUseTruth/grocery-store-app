@@ -27,8 +27,10 @@ function ShoppingCartItem({
         alt={product.product_name}
       />
       <p>
-        {product.product_name} - {product.unit_measurement} - $
-        {product.unit_price}
+        {product.product_name} - {product.unit_measurement}
+        <br />
+        Quanity: {product.quantity} - ${' '}
+        {(product.unit_price * product.quantity).toFixed(2)}
       </p>
       <div className="close-container" onClick={handleRemove}>
         <IoIosClose fontSize={24} />

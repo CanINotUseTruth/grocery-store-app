@@ -15,6 +15,10 @@ function Dashboard({
   setShoppingCart,
   toggleItemModal,
   setCurrentSelectedProduct,
+  minPrice,
+  setMinPrice,
+  maxPrice,
+  setMaxPrice,
 }) {
   let dashboardContent;
 
@@ -44,6 +48,8 @@ function Dashboard({
         handleClear={handleClear}
         currentCategory={currentCategory}
         currentSubCategory={currentSubCategory}
+        maxPrice={maxPrice}
+        setMaxPrice={setMaxPrice}
       />
       <div className="product-container">{dashboardContent}</div>
     </div>
