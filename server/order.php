@@ -1,8 +1,4 @@
 <?php 
-    use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\SMTP;
-    use PHPMailer\PHPMailer\Exception;
-
     header("Access-Control-Allow-Origin: *");
     header("Access-Control-Allow-Headers: *");
     $rest_json = file_get_contents("php://input");

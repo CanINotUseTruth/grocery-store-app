@@ -110,7 +110,7 @@ function App() {
   return (
     <React.Fragment>
       <header className="app-header">
-        <NavigationBar />
+        <NavigationBar handleClear={handleClear} />
       </header>
 
       <div className="app-body">
